@@ -9,5 +9,5 @@ npm-debug.log
 *.orig
 .idea/
 .justconf/
-types
-build
+# types
+# build

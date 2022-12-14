@@ -104,9 +104,12 @@ export class Symbols extends PureComponent<Props> {
     const { className, cx, cy, size } = this.props;
 
     if (cx === +cx && cy === +cy && size === +size) {
+      const filteredProps = filterProps(this.props, true);
+      // Removing points as <path> does not have attribute points
+      delete filteredProps.points;
       return (
         <path
-          {...filterProps(this.props, true)}
+          {...filteredProps}
           className={classNames('recharts-symbols', className)}
           transform={`translate(${cx}, ${cy})`}
           d={this.getPath()}
