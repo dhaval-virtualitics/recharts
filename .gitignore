@@ -1,8 +1,8 @@
 .DS_Store
 *.log
 node_modules
-umd
-lib
+# umd
+# lib
 es6
 coverage
 npm-debug.log
